@@ -9,7 +9,8 @@
   {{ end }}
   {{ $channel := $scratch.Get "channel" }}
 
-  <div class="content">
+  <img src="/img/channels/{{ $channel.slug }}/youtube_banner.jpg" alt=" {{ $channel.name }}" style="width: 100vw; position: absolute; z-index: -1; margin-left: -2rem" />
+  <div class="content" style="padding-top: 20rem">
     <h1 class="heading"><a href="{{ .Page.RelPermalink }}">{{ .Title }}</a></h1>
     <img src="/img/channels/{{ $channel.slug }}.jpg" class="channel-image heading-image" alt=" {{ $channel.name }}" />
     <p>{{ $channel.description | markdownify }}</p>
